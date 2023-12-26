@@ -27,17 +27,17 @@
 	  }
       .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
     </style>
+    <script type="text/javascript">
+    </script>
   </head>
-  <body>
+  <body onload="refreshIFrame()">
     <textarea id="source">
 
 class: center, middle
 
-# Musings on AI
+# Musings on Generative AI
 
-![alt_text](img/image.png)
-
-<br />
+![cactus_car_ai](img/cactus_car_ai.png)
 
 Lee Johnson (LEEJO / leejo / lee@payprop.com)
 
@@ -45,43 +45,958 @@ Lee Johnson (LEEJO / leejo / lee@payprop.com)
 
 ???
 
----
+I guess this is the biennial "Lee gives a talk that's about photography at the German Perl/Raku Workshop"
 
-## Foo
+This was going to be longer but I cut it down.
 
-"Everything exists to end in a photograph", Sontag
+Curtis and others talked/are talking about the coding concerns, I thought I would talk about something else.
 
-cactus car
+On the image, it's clearly created by generative AI.
 
-cat bed image
+I tried to come up with an slightly absurd prompt: "A pickup truck, battered and dented, has crashed into the side of a dilapidated building. Overgrowth of prickly pear cactus envelops the truck, their spiky pads and yellow flowers contrasting starkly against the metal frame and cracked windows. The sky above is a clear, vivid blue, offering a stark contrast to the chaos below."
 
-https://www.metafilter.com/201838/What-we-need-is-a-Voight-Kampff-test-is-this-real-or-AI
+It's... OK. I suppose. 
 
-Blockchain -> NFTs -> AI
+It just looks a little off. And "little" is me being very generous here
 
-ChatGPT (blog post)
-
-Generative fill (Big Ben)
-
-"Pay no attention to that man behind the curtain"
-
-https://collectordaily.com/omar-victor-diop-x-the-anonymous-project-being-there/
-
-https://www.magnumphotos.com/arts-culture/society-arts-culture/book-veles-jonas-bendiksen-hoodwinked-photography-industry/
-
-new topographics vs all those AI portraits
-
-Mosse - false colour photos, Infra etc
+And DALL-E clearly ignored some of my prompting.
 
 ---
 
-## Questions? / References
+## Some Quotes To Start
 
-*QR Code link to talk here*
+--
+
+* "Today everything exists to end in a photograph"
+
+  * Susan Sontag, 1977
+
+???
+
+Sontag wrote a series of essays in the 60s and 70s that were compiled into a book called "On Photography"
+
+Sontag was the partner of Annie Leibovitz
+
+---
+
+## Some Quotes To Start
+
+![leibovitz_1](img/leibovitz_1.jpeg)
+
+???
+
+Leibovitz got her start shooting music and worked for Rolling Stone magazine for a while
+
+---
+
+## Some Quotes To Start
+
+![leibovitz_2](img/leibovitz_2.jpeg)
+
+???
+
+She then moved to fashion and editorial photography, the likes of "Vanity Fair" and such
+
+This is a photo from 2016, it's bad on so many levels, but interesting because of that.
+
+...
+
+It's so bad.
+
+This is not generative AI but to look at it now you would think that it is.
+
+---
+
+## Some Quotes To Start
+
+* "Today everything exists to end in a photograph"
+
+  * Susan Sontag, 1977
+
+* "When you put four edges around some facts, you change those facts."
+
+  * Garry Winogrand (1928-1984)
+
+---
+
+## Some Quotes To Start
+
+![winogrand_2](img/winogrand_2.jpeg)
+
+???
+
+Winogrand was the most prolific street photographer of the 1950s to 1980s
+
+When he died he had close to 10,000 rolls of film still to be processed
+
+---
+
+## Some Quotes To Start
+
+![winogrand_1](img/winogrand_1.jpeg)
+
+???
+
+1964
+
+He also said "You have a lifetime to learn technique. But I can teach you what is more important than technique, how to see; learn that and all you have to do afterwards is press the shutter."
+
+---
+
+## Some Quotes To Start
+
+* "Today everything exists to end in a photograph"
+
+  * Susan Sontag, 1977
+
+* "When you put four edges around some facts, you change those facts."
+
+  * Garry Winogrand (1928-1984)
+
+* "What are the gaps?"
+
+  * Martin Parr, 2024
+
+---
+
+## Some Quotes To Start
+
+![:scale 75%](img/parr_1.jpg)
+
+???
+
+Parr caused a bit of a stir when his colour work first got published in the early 1980s
+
+His work was dismissed as vernacular, "snap shots", and his attempt to join Magnum led to outcry from other members
+
+---
+
+## Some Quotes To Start
+
+![parr_2](img/parr_2.jpg)
+
+???
+
+Why would anyone shoot photographs of this?
+
+Parr ended up as president of the Magnum photo agency for a few years recently
+
+---
+
+## Hype Hype Hype!
+
+We all remember this stuff?
+
+--
+* Deep Blue
+
+???
+
+When IBM beat Kasparov in 1997 and we all thought we were doomed and nobody would play chess ever again?
+
+Chess remains pretty popular
+
+--
+* IBM Watson
+
+???
+
+"Natural language" stuff - It won Jeopardy in 2011
+
+--
+* Siri
+
+???
+
+Also 2011, don't think it was ever a contestent on Jeopardy though
+
+--
+* Big Data
+
+???
+
+CERN have been doing that for decades
+
+--
+* Crypto currencies
+
+???
+
+The less said the better at this point?
+
+--
+* Blockchain
+
+???
+
+Actually has real world applications outside the hype
+
+--
+* NFTs
+
+???
+
+Let's pretend these never existed (is that too meta?)
+
+--
+* Virtual Reality
+
+???
+
+It's back! Augmented reality at this point though, not virtual reality
+
+--
+* Chat assistants
+
+???
+
+Incredibly annoying for power users
+
+--
+* Micropayments
+
+???
+
+Blame Visa/MasterCard?
+
+--
+* The Semantic Web
+
+???
+
+Was the next big thing when I was doing my Masters, in 2003
+
+--
+* XML
+
+???
+
+Still everywhere, but JSON/YAML/TOML kind of replaced it in many places
+
+--
+* Rust
+
+???
+
+The language that's going to solve all of our problems!
+
+--
+* Generative AI / LLMs
+
+???
+
+Isn't this just MapReduce on steroids?
+
+---
+
+## Gartner Hype Cycle
+
+![Gatner](img/Gartner_Hype_Cycle.png)
+
+???
+
+Of course they're all examples of this.
+
+Most of them have found real world useful applications
+
+Some of them are still stuck in the trough
+
+With generative AI it feels like we're currently atop the Everest of peaks
+
+How the hell do we get back down?
+
+Generative AI is being shoehorned into everything.
+
+Poorly.
+
+---
+
+## Everything
+
+![mailchimp](img/mailchimp_1.png)
+
+???
+
+And I do mean everything.
+
+I started collecting examples of everyday encounters of it at the end of last year.
+
+We use Mailchimp to send out notifications of events at the Gallery, and they added AI tools recently.
+
+---
+
+## Everything
+
+![mailchimp](img/mailchimp_1a.png)
+
+???
+
+Generate your email content with AI!
+
+---
+
+## Everything
+
+![mailchimp](img/mailchimp_2.png)
+
+???
+
+I mean, it's alright. Maybe a bit too colloquial.
+
+Too wordy! People don't read emails.
+
+According to the analytics about 50% of the people we send these emails to open them, and that is exceptionally high for our sector.
+
+Mailchimp will have stats on this, but surely keep it short and to the point?
+
+Oh yeah, and it needs to be in French.
+
+So I said write it in French.
+
+---
+
+## Everything
+
+![mailchimp](img/mailchimp_3.png)
+
+???
+
+Ok, try again. So I wrote the prompt in French
+
+"il faut écrire le texte en francais"
+
+---
+
+## Everything
+
+![mailchimp](img/mailchimp_4.png)
+
+???
+
+Right.
+
+Maybe you could, you know, generate the text then feed it through Google Translate or something?
+
+---
+
+## Everything, Everything
+
+![tank](img/IMG_5534.jpg)
+
+???
+
+Next!
+
+Does anyone know what this is?
+
+That's right: A Stearman Press SP-445 Film Development Tank
+
+It's pretty niche
+
+I was selling a lot of film kit and the end of last year, including this, so listed it on eBay
+
+---
+
+## Everything, Everything
+
+![tank](img/ebay_ai.png)
+
+???
+
+My description tells anyone who would be interested to purchase this what they want to know.
+
+The AI draft?
+
+---
+
+## Everything, Everything
+
+Introducing the Stearman Press SP-445 Film Processing System with two extra holders for your convenience. This developing kit is compatible with various film types including 4x5, black and white, color, and colour. The tanks and drums are designed to provide efficient and high-quality film processing, making it a great addition to your darkroom and developing equipment. This package includes two spare holders, making it easier for you to process multiple films at once. The Stearman Photo brand ensures that you are getting a reliable and durable product for your photography needs. With its sleek black color, this kit will not only be functional but also aesthetically pleasing. Upgrade your film processing experience with the Stearman Press SP-445 Film Processing System.
+
+???
+
+This is like Reddit comment level word salad
+
+Use some paragraphs for Christ's sake
+
+It's wordy marketing bollocks
+
+Anyone looking at this item on eBay would already know all this anyway
+
+Nobody is stumbling across this item and thinking "oh what I really need in my life is a 4x5 film developing tank"
+
+The AI is pulling from existing blurbs and reviews about this, but the review space is shallow because it's a niche product. It can't tell you what it's actually like to use the product for real because it cannot and will not ever use it.
+
+It tells us nothing new here, it's lacking any informative insight.
+
+And it's wrong:
+ * color and colour?
+ * multiple films at once?
+ * aesthetically pleasing?
+
+---
+
+## Everything, Everything, Everything
+
+![:scale 45%](img/coke_full.jpeg)
+
+???
+
+Can you see that?
+
+---
+
+## Everything, Everything, Everything
+
+![:scale 45%](img/coke_close.jpeg)
+
+???
+
+Yeah, right
+
+---
+
+## What Do You Think About All This AI "Stuff"?
+
+???
+
+I get asked this relatively frequently, as I'm sure you do
+
+I'm a software engineer so I must have some compelling insight on it?
+
+--
+
+I mean.. it's alright I suppose. But...
+
+--
+
+![blurst](img/blurst.gif)
+
+???
+
+The burden is shifting to curation and review
+
+I feel like I have to proof read and review enough stuff already
+
+This is peak Simpsons BTW - 1993, S4E17
+
+---
+
+## The Inevitable End State?
+
+![aicommits](img/aicommits.png)
+
+???
+
+7300 stars on github
+
+The repo itself has an average commit message length of 120 bytes
+
+That includes the Date and Author headers
+
+If you use a tool like this you fail at software engineering
+
+And I hate you
+
+---
+
+name: doesnotexist 
+
+## Person Doesn't Exist
+
+<p align="center">
+	<iframe
+		id="doesnotexist"
+		src="https://thispersondoesnotexist.com/"
+		width="400"
+		height="400"
+	/>
+</p>
+
+???
+
+But anyway, photography?
+
+Should we be concerned about "AI photography"
+
+How is generative AI going to change it?
+
+What about the criticisms and dismissals of it not being photography?
+
+This was 2019
+
+Person probably exists - the odds are good with 8 billion people on this planet
+
+---
+
+## Person Doesn't Exist
+
+<br />
+<br />
+
+![MagrittePipe](img/MagrittePipe.jpg)
+
+???
+
+It's a bit "The Treachery of Images"
+
+René Magritte said this in 1929
+
+* "The word is not the thing"
+* "The map is not the territory"
+* "The portrait is not the person"
+
+All photography is a lie
+
+Or at the least a partial truth
+
+Winogrand? ("When you put four edges around some facts, you change those facts.")
+
+---
+
+## Manipulation / Lies
+
+???
+
+But first what about all the issues around generative AI not being real "photography"?
+
+--
+
+![:scale 40%](img/kate.jpeg)
+
+???
+
+This is a really sad situation.
+
+Kate photo - we trust nothing that might be PR, but we trust everything else?
+
+https://archive.is/1bI5r - "Photography Is No Longer Evidence of Anything". That has been the case for a long long time.
+
+Is it surprising that the most PR controlled and mainpulated family on earth is going to also have their photographs manipulated?
+
+No. Not at all.
+
+Should we care?
+
+No. Not at all.
+
+Because every single photo you see or take is manipulated in some way
+
+It's practically impossible to take a photo with this device (hold up phone) without computational photography being involved
+
+Sometimes it's astonishgly good, sometimes astonishgly bad
+
+But, intentions - sure. I don't think there was any bad intentions at play, just a thousand tiny bad editing decisions. Like that Leibovitz photo earlier.
+
+Going back, before computational photography - your choice of camera or film stock would inform your approach.
+
+---
+
+## Manipulation / Lies
+
+![:scale 50%](img/Lange-MigrantMother02.jpg)
+
+???
+
+Going back almost 90 years.
+
+"Migrant Mother" 1936, by Dorothea Lange
+
+It came to symbolize the hunger, poverty and hopelessness endured by so many Americans during the Great Depression. 
+
+Notice anything odd in the bottom right hand corner?
+
+---
+
+## Manipulation / Lies
+
+![:scale 50%](img/Lange-MigrantMother02_thumb.jpg)
+
+???
+
+A thumb removed in post, and the story about the subject(s) misleading
+
+Is this any different to the Kate photo?
+
+The woman in the photo wasn't actually a migrant, and was a Native American.
+
+---
+
+## Manipulation / Lies
+
+![:scale 80%](img/adams.jpg)
+
+???
+
+Yosemite Valley, Yosemite National Park, 1934. Also 90 years ago.
+
+Ansel Adams, the epochal landscape photographer
+
+He literally wrote the book(s) on photography (three of them)
+
+He wanted to show the beauty of nature
+
+His images were heavily manipulated in the darkroom
+
+But that's alright?
+
+Adams went on to be a cofounder of the "f.64 Group", that was dedicated to the promotion of "pure" photography, defined in their manifesto as "possessing no qualities of technique, composition or idea, derivative of any other art form."
+
+Which is a bit weird, given darkroom printing is a lot like painting.
+
+Do as I say not as I do?
+
+---
+
+## Manipulation / Lies
+
+![:scale 80%](img/Raising_a_flag_over_the_Reichstag_-_Restoration.jpg)
+
+???
+
+Raising a flag over the Reichstag, 1945
+
+Staged and edited, the photographer even supplied the flag 
+
+I could have used the raising of the flag at Iwo Jima image here
+
+That won the Pulitzer Prize, but itself has resulted in controversy
+
+(sarcastically) It's almost like photography can be a form of propaganda?
+
+---
+
+## Manipulation / Lies
+
+![:scale 100%](img/nat_geo.jpg)
+
+???
+
+On the left: who knows?
+
+Pyramids were moved closer, the photographer explained that the magazine had done this without his permission.
+
+It later turned out that the photographer had paid the camel riders to go back and forth until he got the perfect shot.
+
+On the right: Steve McCurry's "Afghan Girl" cover
+
+McCurry later turned out to be a serial Photoshoper, often removing or replacing large parts of photos.
+
+He defended this by saying "I'm not a photojournalist"
+
+---
+
+## "I'm not a photojournalist" (AKA "Fine Art")
+
+![:scale 100%](img/crewdson.jpeg)
+
+???
+
+Gregory Crewdson, 2003
+
+His photographs are elaborately planned, produced, and lit using crews familiar with motion picture production who light large scenes using cinema production equipment and techniques.
+
+Every part of every photo is meticulously planned.
+
+These are heavily influenced by paintings by Hopper, films by Lynch, and so on.
+
+He will sell out his entire print run for a project before he has even shot the photos.
+
+He's incredibly successful.
+
+---
+
+## "I'm not a photojournalist" (AKA "Fine Art")
+
+<br />
+
+![:scale 100%](img/rhien_ii.jpg)
+
+???
+
+Andreas Gursky, Rhine II, 1999
+
+This  was produced in an edition of six
+
+It is a heavily manipulated photograph, all the background detail was removed.
+
+Gursky is transparent about this - it's part of the appeal of his work.
+
+In 2011, a print of Rhein II was auctioned for $4.3 million (then £2.7m), making it the most expensive photograph ever sold (until 2022)
+
+---
+
+## "I'm not a photojournalist" (AKA "Fine Art")
+
+![:scale 55%](img/fredericks_blaze.jpg)
+
+???
+
+Murray Fredricks
+
+His latest project involves shooting photos of trees that look like they're on fire.
+
+He runs gas piping up the back of the tree to give that impression.
+
+A common criticism of Fine Art photography is "I could have shot that".
+
+Exactly, but you didn't.
+
+Successul fine art photography is largely about an idea well executed.
+
+---
+
+## Reuse / Reworking / Remxing / Reappropriation
+
+<br />
+
+![prince](img/Abell_Prince.jpeg)
+
+???
+
+Sam Abell shot a series of photos for a Marlboro ad campaign. Richard Prince shot photos of those photos in a way that cropped out the text and logo.
+
+Prince's picture is a copy (the photograph) of a copy (the advertisement) of a myth (the cowboy).
+
+Prince's photos sold for millions.
+
+Prince has been sued multiple times by artists and photographers that were upset he had reappropriated their work. He has never lost a case.
+
+---
+
+## Expectation / Reality
+
+![:scale 65%](img/cat_bed.jpeg)
+
+???
+
+My partner showed me this a few months ago.
+
+It's clearly generative AI
+
+Without even looking at the detail.
+
+I mean, the shear impracticality of the thing.
+
+"Today everything exists to end in a photograph" is now "Today nothing needs to exist to end in a photograph"
+
+---
+
+## Expectation / Reality
+
+![:scale 80%](img/cat_bed_facebook.png)
+
+???
+
+7,264 people (as of time of screenshot) don't know or don't care. Probably some combination of the two heavily biased towards the latter.
+
+Because...
+
+---
+
+## Expectation / Reality
+
+![:scale 70%](img/wonka.png)
+
+???
+
+AI concept art as event bait
+
+The stupidest thing I'd seen. That week at least.
+
+---
+
+## Generation / Product Photography?
+
+![IKEA](img/IKEA.png)
+
+???
+
+This stuff can be done very well though, like this.
+
+Since 2014. A decade ago.
+
+I think we can be pretty sure today 100% of IKEA's photographs are generated.
+
+Stock photography?
+
+Commercial production work?
+
+Same.
+
+I'm sure there is plenty of "photography" we see now that is entirely generated, either by AI or otherwise, that gives us no clues that it was done so.
+
+In fact, I wouldn't be surprised if more than 50% of the imagery, or "photography", we see now is generated, especially online.
+
+The meaning of "photography" is changing
+
+---
+
+## Perpetual Change
+
+Photography is... "a discipline established on a technological bedrock that shifts every so often ... The next hundred years will continue to bring unimaginable change to the medium and to be surprised by this is your own damn fault." - http://www.fototazo.com/2015/04/the-meaning-of-films-decline.html
+
+???
+
+How often?
+
+--
+* 200 years ago: The first "photographs": Fixed images
+
+--
+* 150 years ago: a rich person's play thing: Collodion and Daguerreotypes
+ * Involving a chemical process that had a good chance of killing you.
+
+--
+* 120 years ago: the Box Brownie
+ * Photography was there if you wanted it.
+ * Most people still didn't want, or could afford it, though.
+
+--
+* 100 years ago: 35mm film
+
+--
+* 80 years ago: Instant film
+
+--
+* 50 years ago: Digital photography
+
+--
+* 25 years ago: Camera phones
+
+--
+* Now: Generative AI
+
+???
+
+To summarise...
+
+---
+
+## Perpetual Change
+
+--
+* "You have to be a bit nuts to try this"
+
+--
+
+* "You have to be able to afford it"
+
+--
+
+* "You have to want to do it"
+
+--
+
+* "You have to be there"
+
+--
+
+* "You have to have an idea"
+
+???
+
+At least if you want to stand out
+
+because everyone is everywhere all of the time with a camera and taking exceptionally well composed, nicely exposed, sharp, beautiful photos isn't going to get you anywhere in the art world because that's no longer interesting.
+
+In fact it's utterly mundane, calling yourself an "influencer" doesn't change this.
+
+But...
+
+---
+
+## "What Are The Gaps?"
+
+![archive_six](img/crb_archive_six.jpg)
+
+???
+
+Café Royal Books publishes weekly titles, focussing on post-war documentary photography linked to Britain and Ireland. Occasionally they photography from outside the UK.
+
+This is the sixth archive box set. They produce these every couple of years.
+
+Each archive contains 100 books.
+
+Books like these (show books).
+
+Each book contains fifteen to twenty unseen photographs.
+
+The photos often are often technically imperfect.
+
+But every book contains interesting and important work.
+
+Filling in the gaps.
+
+---
+
+## "What Are The Gaps?"
+
+![gaps](img/gaps.png)
+
+???
+
+This is Martin Parr interviewing Craig Atkinson, who runs Cafe Royal books
+
+All the books in the background here as well are filling in the gaps
+
+Full of photography beyond the technicalities like:
+
+* "Is it sharp"
+
+* "Is it in focus"
+
+* "Is it properly exposed"
+
+* "Is the horizon straight"
+
+* "Are the colours correct"
+
+None of these are really that important
+
+---
+
+## "What Are The Gaps?"
+
+--
+
+* Important and arguably interesting photography is predicated on filling in the gaps.
+
+--
+
+* We are awash with technically competent boring photography. Mediocrity.
+
+--
+
+* Generative AI for most photography is either technically incompetent or not interesting.
+
+--
+
+* It's often used as filler - all those hero images now occupying the headers of blog posts
+
+--
+
+* It's not quite got to the level of mediocrity.
+
+--
+
+* Maybe it will soon, and maybe it will get beyond that.
+
+--
+
+* But it's unlikely it will ever be able to fill in the gaps.
+
+---
+
+### Questions?
+
+![cactus_car_ai](img/cactus_car_lee.png)
 
 This talk is available at: (https://leejo.github.io/code/)
 
- * [Link](https://www.link.com)
+???
+
+This is the real cactus car, I shot this in September 2023
 
     </textarea>
     <script src="https://remarkjs.com/downloads/remark-latest.min.js" type="text/javascript">
@@ -95,9 +1010,23 @@ This talk is available at: (https://leejo.github.io/code/)
 
         var slideshow = remark.create({
             highlightLines: true,
-			slideNumberFormat: ""
+			//slideNumberFormat: ""
         });
 
+		var slide_name;
+
+		slideshow.on('showSlide', function (slide) {
+			slide_name = slide.properties.name;
+		});
+
+		function refreshIFrame() {
+            var x = document.getElementById("doesnotexist");
+			if ( slide_name == "doesnotexist" ) {
+				document.getElementById('doesnotexist').src
+					= document.getElementById('doesnotexist').src;
+			}
+            var t = setTimeout( refreshIFrame,3000 );
+        }
     </script>
   </body>
 </html>
